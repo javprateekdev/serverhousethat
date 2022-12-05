@@ -11,7 +11,7 @@ app.get("/data", (req, resp) => {
     else { resp.send(result) }
   })
 });
-app.post("/data", (req, res) => {
+app.post("/compare/data", (req, res) => {
   const q = "INSERT INTO `project`(`u_id`, `name`, `label`, `ProjectPlotArea`, `GreenArea`, `PropertyStatus`, `PriceRange`, `TotalTowers`, `TotalFlats`, `OCStatus`, `Density`, `PodiumNonPodium`, `ApprovedBank`, `ClubHouseSize`, `ConstructionType`, `TowerHeights`, `LiftperTower`, `FloorvsFlats`, `PossessionDate`, `Lobby`, `Distance`, `Segment`) VALUES (?)";
 
   const values = [
