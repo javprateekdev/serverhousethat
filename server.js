@@ -5,7 +5,7 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
-app.get("/data", (req, resp) => {
+app.get("/compare/data", (req, resp) => {
   con.query("select * from project", (err, result) => {
     if (err) { resp.send("error in api") }
     else { resp.send(result) }
